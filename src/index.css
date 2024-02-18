@@ -11,13 +11,15 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
   border: none;
   outline: none;
   list-style: none;
   text-decoration: none;
+  font-size: inherit;
 }
 
 body {
   font-size: 10px;
+  box-sizing: border-box;
 }

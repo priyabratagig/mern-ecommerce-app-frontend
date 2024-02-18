@@ -29,6 +29,7 @@ const InputContainer = styled.div`
 `
 
 const Input = styled.input`
+  font-size: 1.6em;
   border: none;
   flex: 8;
   padding-left: 2rem;
@@ -41,6 +42,7 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  font-size: 4em;
 `
 
 function Newsletter() {
@@ -51,7 +53,7 @@ function Newsletter() {
       <InputContainer>
         <Input type="email" placeholder="Your email" />
         <Button>
-          <Send style={{ fontSize: "2.6em" }} />
+          <Send style={{ fontSize: "inherit" }} />
         </Button>
       </InputContainer>
     </Container>

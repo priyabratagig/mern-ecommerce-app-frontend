@@ -9,6 +9,7 @@ const Container = styled.nav`
   top: 0;
   z-index: 2;
   background-color: white;
+  font-size: 1.5em;
 `
 
 const Wrapper = styled.div`
@@ -26,7 +27,6 @@ const Left = styled.div`
 `
 
 const Language = styled.span`
-  font-size: 1.4em;
   cursor: pointer;
 `
 
@@ -58,8 +58,11 @@ const Right = styled.div`
 `
 
 const MenuItem = styled.div`
-  font-size: 1.4em;
   cursor: pointer;
+
+  &:last-child {
+    font-size: 2.5rem;
+  }
 `
 
 
@@ -82,7 +85,7 @@ function Navbar() {
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
+              <ShoppingCartOutlined style={{ cursor: "pointer", fontSize: "inherit" }} />
             </Badge>
           </MenuItem>
         </Right>

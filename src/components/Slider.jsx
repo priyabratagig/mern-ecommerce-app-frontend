@@ -29,6 +29,7 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 1;
+  font-size: 4em;
 `
 
 const Wrapper = styled.div`
@@ -52,7 +53,7 @@ function Slider() {
   return (
     <Container>
       <Arrow $direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined style={{ fontSize: "4em" }} />
+        <ArrowLeftOutlined style={{ fontSize: "inherit" }} />
       </Arrow>
       <Wrapper $slideIndex={slideIndex}>
         {slides.map((item) => (
@@ -60,7 +61,7 @@ function Slider() {
         ))}
       </Wrapper>
       <Arrow $direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined style={{ fontSize: "4em" }} />
+        <ArrowRightOutlined style={{ fontSize: "inherit" }} />
       </Arrow>
     </Container>
   )

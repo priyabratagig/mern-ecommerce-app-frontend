@@ -61,7 +61,7 @@ const Title = styled.h3`
 `
 
 const List = styled.ul`
-  font-size: 1.6em;
+  font-size: 1.8em;
   display: flex;
   flex-wrap: wrap;
   row-gap: 0.5rem;
@@ -81,7 +81,7 @@ const Right = styled.div`
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.6em;
+  font-size: 1.8em;
 `;
 
 const Payment = styled.img`

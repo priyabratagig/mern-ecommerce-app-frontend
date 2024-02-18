@@ -29,6 +29,7 @@ const Info = styled.figcaption`
 const Title = styled.h1`
     color:white;
     margin-bottom: 2rem;
+    font-size: 4em;
 `;
 
 const Button = styled.button`
@@ -37,6 +38,7 @@ const Button = styled.button`
     color:gray;
     cursor: pointer;
     font-weight: 600;
+    font-size: 1.6em;
 `;
 
 function CategoryItem({ item }) {
