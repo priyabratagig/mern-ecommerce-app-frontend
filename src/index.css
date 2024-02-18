@@ -3,4 +3,20 @@
 
 :root {
   font-family: Urbanist;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 10px;
 }
