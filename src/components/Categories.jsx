@@ -8,7 +8,7 @@ const Container = styled.section`
   justify-content: space-between;
 `
 
-const Categories = () => {
+function Categories() {
     const categories = useSelector((state) => state.categories)
 
     return (

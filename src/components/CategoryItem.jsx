@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 const Container = styled.figure`
   flex: 1;
@@ -39,7 +39,7 @@ const Button = styled.button`
     font-weight: 600;
 `;
 
-const CategoryItem = ({ item }) => {
+function CategoryItem({ item }) {
     return (
         <Container>
             <Image src={item.img} />
@@ -53,11 +53,10 @@ const CategoryItem = ({ item }) => {
 
 CategoryItem.propTypes = {
     item: PropTypes.shape({
-        id: PropTypes.number,
         img: PropTypes.string,
         title: PropTypes.string,
         cat: PropTypes.string,
     })
-};
+}
 
 export default CategoryItem
