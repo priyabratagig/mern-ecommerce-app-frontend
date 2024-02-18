@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.header`
   height: 3rem;
   background-color: teal;
   color: white;
@@ -12,9 +12,9 @@ const Container = styled.div`
 `;
 
 function Announcement() {
-    return (
-        <Container>Super Deal! Free Shipping on Orders Over Rs.500</Container>
-    )
+  return (
+    <Container>Super Deal! Free Shipping on Orders Over Rs.500</Container>
+  )
 }
 
 export default Announcement

@@ -15,7 +15,7 @@ const Container = styled.section`
 const Arrow = styled.div`
   width: 5rem;
   height: 5rem;
-  background-color: #fff7f7;
+  background-color: #6da5b3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
-  z-index: 2;
+  z-index: 1;
 `
 
 const Wrapper = styled.div`
@@ -52,7 +52,7 @@ function Slider() {
   return (
     <Container>
       <Arrow $direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
+        <ArrowLeftOutlined style={{ fontSize: "4em" }} />
       </Arrow>
       <Wrapper $slideIndex={slideIndex}>
         {slides.map((item) => (
@@ -60,7 +60,7 @@ function Slider() {
         ))}
       </Wrapper>
       <Arrow $direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined />
+        <ArrowRightOutlined style={{ fontSize: "4em" }} />
       </Arrow>
     </Container>
   )

@@ -5,6 +5,10 @@ import { Badge } from "@mui/material"
 
 const Container = styled.nav`
   height: 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
 `
 
 const Wrapper = styled.div`
@@ -41,6 +45,9 @@ const Center = styled.div`
   flex: 1;
   text-align: center;
 `
+const LogoContainer = styled.div`
+  font-size: 2.5rem;
+`
 
 const Right = styled.div`
   flex: 1;
@@ -67,7 +74,9 @@ function Navbar() {
             <Search />
           </SearchContainer>
         </Left>
-        <Center>{Logo}</Center>
+        <Center>
+          <LogoContainer>{Logo}</LogoContainer>
+        </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>

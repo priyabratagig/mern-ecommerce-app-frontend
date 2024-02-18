@@ -43,27 +43,27 @@ const Button = styled.button`
 `
 
 function Slide({ item }) {
-    return (
-        <Container $bg={item.bg}>
-            <ImgContainer>
-                <Image src={item.img} />
-            </ImgContainer>
-            <InfoContainer>
-                <Title>{item.title}</Title>
-                <Desc>{item.desc}</Desc>
-                <Button>SHOW NOW</Button>
-            </InfoContainer>
-        </Container>
-    )
+  return (
+    <Container $bg={item.bg}>
+      <ImgContainer>
+        <Image src={item.img} />
+      </ImgContainer>
+      <InfoContainer>
+        <Title>{item.title}</Title>
+        <Desc>{item.desc}</Desc>
+        <Button>SHOW NOW</Button>
+      </InfoContainer>
+    </Container>
+  )
 }
 
 Slide.propTypes = {
-    item: PropTypes.shape({
-        img: PropTypes.string,
-        title: PropTypes.string,
-        desc: PropTypes.string,
-        bg: PropTypes.string,
-    })
+  item: PropTypes.shape({
+    img: PropTypes.string,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    bg: PropTypes.string,
+  })
 }
 
 export default Slide

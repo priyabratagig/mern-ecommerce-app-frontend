@@ -2,7 +2,7 @@ import { BlurOnSharp } from "@mui/icons-material"
 import styled from "styled-components"
 
 const Container = styled.h1`
-    font-size: 2.5em;
+    font-size: inherit;
     font-weight: bold;
     display: flex;
     align-items: center;
