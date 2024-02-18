@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   transform: translateX(${(props) => props.$slideIndex * -100}vw);
 `
 
-const Slide = styled.div`
+const Slide = styled.figure`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -54,7 +54,7 @@ const Image = styled.img`
   height: 80%;
 `
 
-const InfoContainer = styled.div`
+const InfoContainer = styled.figcaption`
   flex: 1;
   padding: 5rem;
 `
