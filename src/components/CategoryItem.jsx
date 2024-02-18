@@ -24,13 +24,13 @@ const Info = styled.figcaption`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Title = styled.h1`
     color:white;
     margin-bottom: 2rem;
     font-size: 4em;
-`;
+`
 
 const Button = styled.button`
     padding: 1rem;
@@ -39,7 +39,7 @@ const Button = styled.button`
     cursor: pointer;
     font-weight: 600;
     font-size: 1.6em;
-`;
+`
 
 function CategoryItem({ item }) {
     return (
