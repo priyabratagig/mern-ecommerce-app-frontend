@@ -5,16 +5,21 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import womens_jeans from "../assets/pictures/women's_jean.jpg";
+import { mobile } from "../styled-responsive";
 
 const Wrapper = styled.section`
-  padding: 3rem;
+  margin: 3rem;
   display: flex;
   min-height: 90vh;
+
+  ${mobile({ flexDirection: "column", margin: "2rem" })}
 `
 
 const ImgContainer = styled.figure`
   flex: 1;
   position: relative;
+
+  ${mobile({ height: "40vh", flex: "auto" })}
 `
 
 const Image = styled.img`
@@ -31,6 +36,8 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+
+  ${mobile({ margin: "2rem 0rem", rowGap: "1rem" })}
 `
 
 const Title = styled.h1`
@@ -53,6 +60,8 @@ const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 2em;
+
+  ${mobile({ width: "100%", margin: "1.5rem 0rem" })}
 `
 
 const Filter = styled.div`
@@ -75,8 +84,10 @@ const FilterColor = styled.div`
 
 const FilterSize = styled.select`
   padding: 0.5rem;
-  border: 0.2rem solid #afacac;
+  border: var(--border);
   font-size: 1.6rem;
+
+  ${mobile({ fontSize: "1.2rem" })}
 `
 
 const FilterSizeOption = styled.option``
@@ -86,6 +97,8 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${mobile({ width: "100%" })}
 `
 
 const AmountContainer = styled.div`
@@ -101,7 +114,7 @@ const Amount = styled.span`
   font-size: 1.6rem;
   aspect-ratio: 1/1;
   border-radius: 1rem;
-  border: 0.2rem solid teal;
+  border: var(--border-teal);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +122,7 @@ const Amount = styled.span`
 
 const Button = styled.button`
   padding: 1.4rem;
-  border: 2px solid teal;
+  border: var(--border-teal);
   background-color: white;
   cursor: pointer;
   font-weight: 500;

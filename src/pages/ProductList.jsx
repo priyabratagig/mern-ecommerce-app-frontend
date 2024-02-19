@@ -4,6 +4,7 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { mobile } from "../styled-responsive";
 
 const Title = styled.h1`
     margin: 2rem;
@@ -21,6 +22,8 @@ const Filter = styled.div`
     display: flex;
     column-gap: 2rem;
     align-items: center;
+
+    ${mobile({ flexDirection: "column", rowGap: "1rem", alignItems: "flex-start" })}
 `
 
 const FilterText = styled.span`
@@ -31,7 +34,9 @@ const FilterText = styled.span`
 const Select = styled.select`
   padding: 1rem;
   font-size: 1.8em;
-  border: 0.2rem solid #afacac;
+  border: var(--border);
+
+  ${mobile({ fontSize: "1.2em" })}
 `
 
 const Option = styled.option``;

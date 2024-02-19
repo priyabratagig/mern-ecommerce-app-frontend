@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Slide from "./Slide";
+import { mobile } from "../styled-responsive";
 
 const Container = styled.section`
   width: 100%;
@@ -10,6 +11,8 @@ const Container = styled.section`
   display: flex;
   position: relative;
   overflow: hidden;
+
+  ${mobile({ display: "none" })}
 `
 
 const Arrow = styled.div`

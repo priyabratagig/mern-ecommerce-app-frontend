@@ -2,6 +2,7 @@ import { Search, ShoppingCartOutlined } from "@mui/icons-material"
 import styled from "styled-components"
 import Logo from "./Logo"
 import { Badge } from "@mui/material"
+import { mobile } from "../styled-responsive"
 
 const Container = styled.nav`
   height: 6rem;
@@ -10,6 +11,8 @@ const Container = styled.nav`
   z-index: 2;
   background-color: white;
   font-size: 1.5em;
+
+  ${mobile({ height: "5rem", fontSize: "1.4em" })}
 `
 
 const Wrapper = styled.div`
@@ -17,6 +20,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${mobile({ padding: "1rem" })}
 `
 
 const Left = styled.div`
@@ -28,17 +33,20 @@ const Left = styled.div`
 
 const Language = styled.span`
   cursor: pointer;
+
+  ${mobile({ display: "none" })}
 `
 
 const SearchContainer = styled.div`
-  border: 0.05rem solid lightgray;
+  border: var(--border-thin);
   display: flex;
   align-items: center;
   padding: 0.5rem;
 `
 
 const Input = styled.input`
-  border: none;
+
+  ${mobile({ width: "5rem" })}
 `
 
 const Center = styled.div`
@@ -47,6 +55,8 @@ const Center = styled.div`
 `
 const LogoContainer = styled.div`
   font-size: 2.5rem;
+
+  ${mobile({ fontSize: "2rem" })}
 `
 
 const Right = styled.div`
@@ -55,13 +65,17 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   column-gap: 2.5rem;
+
+  ${mobile({ flex: 2, justifyContent: "center", columnGap: "1rem" })}
 `
 
 const MenuItem = styled.div`
   cursor: pointer;
 
   &:last-child {
-    font-size: 2.5rem;
+    font-size: 1.8em;
+
+    ${mobile({ fontSize: "1.6em" })}
   }
 `
 

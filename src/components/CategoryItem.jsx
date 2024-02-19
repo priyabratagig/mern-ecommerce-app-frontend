@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types';
+import { mobile } from "../styled-responsive";
 
 const Container = styled.figure`
   flex: 1;
-  margin: 0.3rem;
   height: 70vh;
   position: relative;
+
+  ${mobile({ height: "50vh", flex: "auto" })}
 `
 
 const Image = styled.img`

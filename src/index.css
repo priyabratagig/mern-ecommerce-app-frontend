@@ -1,25 +1,32 @@
 /* index.css */
 @import url("../global-assets/fonts/urbanist.css");
 
-:root {
-  font-family: Urbanist;
-  font-size: 10px;
-}
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
   border: none;
   outline: none;
   list-style: none;
   text-decoration: none;
+  box-sizing: inherit;
   font-size: inherit;
 }
 
+:root {
+  font-family: Urbanist;
+  font-size: 62.5%;
+}
+
 body {
-  font-size: 10px;
   box-sizing: border-box;
+}
+
+:root {
+  --border: 0.2rem solid lightgray;
+  --btn-hot-border: none;
+  --border-thin: 0.05rem solid lightgray;
+  --border-teal: 0.2rem solid teal;
+  --border-thin-teal: 0.05rem solid teal;
 }

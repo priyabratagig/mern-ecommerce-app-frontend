@@ -6,12 +6,13 @@ import ProductList from './pages/ProductList'
 import Product from './pages/Product'
 import Register from './pages/Register'
 import Login from './pages/LogIn'
+import Cart from './pages/Cart'
 
 function App() {
 
   return (
     <Provider store={store}>
-      <Login />
+      <Home />
     </Provider>
   )
 }

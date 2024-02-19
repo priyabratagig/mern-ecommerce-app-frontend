@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import login_bg from "../assets/pictures/login_bg.webp";
+import { mobile } from "../styled-responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -12,12 +13,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${mobile({ backgroundPosition: "right" })}
 `
 
 const Wrapper = styled.section`
   width: 25%;
   padding: 2rem;
   background-color: white;
+
+  ${mobile({ width: "75%" })}
 `
 
 const Title = styled.h1`
@@ -35,7 +40,7 @@ const Input = styled.input`
   min-width: 40%;
   margin: 1rem 0;
   padding: 1rem;
-  border: 0.2rem solid #afacac;
+  border: var(--border-thin);
   font-size: 1.4em;
 `
 
@@ -55,7 +60,7 @@ const Button = styled.button`
 `;
 
 const Link = styled.a`
-  margin: 0.5rem 0px;
+  margin: 0.5rem 0rem;
   font-size: 1.3em;
   text-decoration: underline;
   color: initial;
@@ -69,21 +74,21 @@ const Error = styled.span`
 
 function Login() {
 
-    return (
-        <Container>
-            <Wrapper>
-                <Title>SIGN IN</Title>
-                <Form>
-                    <Input placeholder="username" type="username" />
-                    <Input placeholder="password" type="password" />
-                    <Button type="button">LOGIN</Button>
-                    {false && <Error>Something went wrong...</Error>}
-                    <Link href="javascript:void(0)">CANN&apos;T REMEMBER THE PASSWORD</Link>
-                    <Link href="javascript:void(0)">CREATE A NEW ACCOUNT</Link>
-                </Form>
-            </Wrapper>
-        </Container>
-    )
+  return (
+    <Container>
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder="username" type="username" />
+          <Input placeholder="password" type="password" />
+          <Button type="button">LOGIN</Button>
+          {false && <Error>Something went wrong...</Error>}
+          <Link href="javascript:void(0)">CANN&apos;T REMEMBER THE PASSWORD</Link>
+          <Link href="javascript:void(0)">CREATE A NEW ACCOUNT</Link>
+        </Form>
+      </Wrapper>
+    </Container>
+  )
 }
 
 export default Login

@@ -10,11 +10,14 @@ import {
 import styled from "styled-components";
 import Logo from "./Logo";
 import paymeent_png from "../assets/pictures/payment.png";
+import { mobile } from "../styled-responsive";
 
 const Container = styled.footer`
   display: flex;
   margin: 2rem;
   column-gap: 2rem;
+
+  ${mobile({ flexDirection: "column", rowGap: "2rem" })}
 `
 
 const Left = styled.div`
@@ -54,6 +57,8 @@ const Center = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
+
+  ${mobile({ display: "none" })}
 `
 
 const Title = styled.h3`
@@ -72,7 +77,7 @@ const ListItem = styled.li`
 `
 
 const Right = styled.div`
-  flex: 1;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;

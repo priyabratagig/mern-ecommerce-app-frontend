@@ -5,6 +5,7 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import PropTypes from 'prop-types';
+import { mobile } from "../styled-responsive";
 
 const Info = styled.figcaption`
   opacity: 0;
@@ -24,7 +25,6 @@ const Info = styled.figcaption`
 
 const Container = styled.figure`
   flex: 1;
-  margin: 0.5rem;
   min-width: 22vw;
   height: 50vh;
   display: flex;
@@ -37,19 +37,25 @@ const Container = styled.figure`
   &:hover ${Info}{
     opacity: 1;
   }
+
+  ${mobile({ width: "100%", flex: "auto", height: "35vh" })}
 `
 
 const Circle = styled.div`
-  width: min(40vh, 40vw);
+  width: max(22vh, 22vw);
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: white;
   position: absolute;
+
+  ${mobile({ width: "max(25vh, 25vw)" })}
 `
 
 const Image = styled.img`
   height: 75%;
+  width: 75%;
   z-index: 1;
+  object-fit: contain;
 `
 
 const Icon = styled.div`
