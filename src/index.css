@@ -12,6 +12,7 @@
   text-decoration: none;
   box-sizing: inherit;
   font-size: inherit;
+  color: initial;
 }
 
 :root {

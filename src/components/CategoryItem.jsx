@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types';
 import { mobile } from "../styled-responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.figure`
   flex: 1;
@@ -44,12 +45,13 @@ const Button = styled.button`
 `
 
 function CategoryItem({ item }) {
+
     return (
         <Container>
             <Image src={item.img} />
             <Info>
                 <Title>{item.title}</Title>
-                <Button>SHOP NOW</Button>
+                <Button><Link to={`/products/${item.cat}`}>SHOP NOW</Link></Button>
             </Info>
         </Container>
     )
@@ -57,9 +59,9 @@ function CategoryItem({ item }) {
 
 CategoryItem.propTypes = {
     item: PropTypes.shape({
-        img: PropTypes.string,
-        title: PropTypes.string,
-        cat: PropTypes.string,
+        img: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        cat: PropTypes.string.isRequired,
     })
 }
 

@@ -1,11 +1,8 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
 import womens_jeans from "../assets/pictures/women's_jean.jpg";
 import { mobile } from "../styled-responsive";
+import Newsletter from "../components/Newsletter";
 
 const Wrapper = styled.section`
   margin: 3rem;
@@ -136,8 +133,6 @@ function Product() {
 
   return (
     <>
-      <Navbar />
-      <Announcement />
       <Wrapper>
         <ImgContainer>
           <Image src={womens_jeans} />
@@ -180,9 +175,8 @@ function Product() {
         </InfoContainer>
       </Wrapper>
       <Newsletter />
-      <Footer />
     </>
-  );
+  )
 }
 
 export default Product

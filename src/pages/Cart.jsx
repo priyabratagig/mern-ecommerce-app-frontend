@@ -1,8 +1,5 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import shoes from "../assets/pictures/shoes.png";
 import tshirt from "../assets/pictures/tshirt.png";
 import { mobile } from "../styled-responsive";
@@ -174,8 +171,6 @@ const Button = styled.button`
 function Cart() {
   return (
     <>
-      <Navbar />
-      <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
@@ -263,7 +258,6 @@ function Cart() {
         </Bag>
       </Wrapper>
       <Hr />
-      <Footer />
     </>
   )
 }

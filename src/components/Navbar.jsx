@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Logo from "./Logo"
 import { Badge } from "@mui/material"
 import { mobile } from "../styled-responsive"
+import { Link } from "react-router-dom"
 
 const Container = styled.nav`
   height: 6rem;
@@ -95,12 +96,14 @@ function Navbar() {
           <LogoContainer>{Logo}</LogoContainer>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem><Link to="./register">REGISTER</Link></MenuItem>
+          <MenuItem><Link to="./login">SIGN IN</Link></MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined style={{ cursor: "pointer", fontSize: "inherit" }} />
-            </Badge>
+            <Link to="./cart">
+              <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined style={{ cursor: "pointer", fontSize: "inherit" }} />
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>

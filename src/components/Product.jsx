@@ -6,6 +6,7 @@ import {
 import styled from "styled-components";
 import PropTypes from 'prop-types';
 import { mobile } from "../styled-responsive";
+import { Link } from "react-router-dom";
 
 const Info = styled.figcaption`
   opacity: 0;
@@ -21,6 +22,12 @@ const Info = styled.figcaption`
   justify-content: center;
   transition: opacity 0.5s ease;
   cursor: pointer;
+
+  & > a {
+    position : absolute;
+    inset: 0;
+    z-index: 2;
+  }
 `
 
 const Container = styled.figure`
@@ -67,6 +74,7 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   margin: 1rem;
+  z-index: 3;
   transition: transform 0.5s ease;
 
   &:hover {
@@ -81,6 +89,7 @@ function Product({ item }) {
       <Circle />
       <Image src={item.img} />
       <Info>
+        <Link to={`/product/1234/blue`} />
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
@@ -97,7 +106,7 @@ function Product({ item }) {
 
 Product.propTypes = {
   item: PropTypes.shape({
-    img: PropTypes.string
+    img: PropTypes.string.isRequired
   })
 }
 

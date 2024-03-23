@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
-import Announcement from "../components/Announcement";
-import Products from "../components/Products";
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
 import { mobile } from "../styled-responsive";
+import Newsletter from "../components/Newsletter";
+import Products from "../components/Products";
 
 const Title = styled.h1`
     margin: 2rem;
@@ -45,14 +42,12 @@ function ProductList() {
 
     return (
         <>
-            <Navbar />
-            <Announcement />
             <Title>Dresses</Title>
             <FilterContainer>
                 <Filter>
                     <FilterText>Filter Products:</FilterText>
-                    <Select name="color" value="0">
-                        <Option value="0" disabled>Color</Option>
+                    <Select name="color" defaultValue="0">
+                        <Option value="0">Color</Option>
                         <Option>White</Option>
                         <Option>Black</Option>
                         <Option>Red</Option>
@@ -60,8 +55,8 @@ function ProductList() {
                         <Option>Yellow</Option>
                         <Option>Green</Option>
                     </Select>
-                    <Select name="size" value="0">
-                        <Option value="0" disabled>Size</Option>
+                    <Select name="size" defaultValue="0">
+                        <Option value="0">Size</Option>
                         <Option>XS</Option>
                         <Option>S</Option>
                         <Option>M</Option>
@@ -71,7 +66,7 @@ function ProductList() {
                 </Filter>
                 <Filter>
                     <FilterText>Sort Products:</FilterText>
-                    <Select>
+                    <Select name="sort" defaultValue="newest">
                         <Option value="newest">Newest</Option>
                         <Option value="asc">Price (asc)</Option>
                         <Option value="desc">Price (desc)</Option>
@@ -80,7 +75,6 @@ function ProductList() {
             </FilterContainer>
             <Products />
             <Newsletter />
-            <Footer />
         </>
     )
 }

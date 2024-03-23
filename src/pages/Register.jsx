@@ -64,7 +64,7 @@ function Register() {
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input placeholder="name" type="name" />
+          <Input placeholder="first name" type="name" />
           <Input placeholder="last name" type="name" />
           <Input placeholder="username" type="username" />
           <Input placeholder="email" type="email" />

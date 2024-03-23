@@ -59,10 +59,10 @@ function Slide({ item }) {
 
 Slide.propTypes = {
   item: PropTypes.shape({
-    img: PropTypes.string,
-    title: PropTypes.string,
-    desc: PropTypes.string,
-    bg: PropTypes.string,
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    bg: PropTypes.string.isRequired
   })
 }
 
